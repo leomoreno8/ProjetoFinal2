@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_usuario = new System.Windows.Forms.TextBox();
+            this.textBox_senha = new System.Windows.Forms.TextBox();
             this.button_login = new System.Windows.Forms.Button();
             this.label_exit = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -87,22 +87,22 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "SENHA";
             // 
-            // textBox1
+            // textBox_usuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(712, 296);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 35);
-            this.textBox1.TabIndex = 5;
+            this.textBox_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_usuario.Location = new System.Drawing.Point(712, 296);
+            this.textBox_usuario.Name = "textBox_usuario";
+            this.textBox_usuario.Size = new System.Drawing.Size(322, 35);
+            this.textBox_usuario.TabIndex = 5;
             // 
-            // textBox2
+            // textBox_senha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(712, 376);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(322, 35);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_senha.Location = new System.Drawing.Point(712, 376);
+            this.textBox_senha.Name = "textBox_senha";
+            this.textBox_senha.Size = new System.Drawing.Size(322, 35);
+            this.textBox_senha.TabIndex = 6;
+            this.textBox_senha.UseSystemPasswordChar = true;
             // 
             // button_login
             // 
@@ -151,8 +151,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label_exit);
             this.Controls.Add(this.button_login);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_senha);
+            this.Controls.Add(this.textBox_usuario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -171,8 +171,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_usuario;
+        private System.Windows.Forms.TextBox textBox_senha;
         private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.Label label_exit;
         private System.Windows.Forms.Label label6;

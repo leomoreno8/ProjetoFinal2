@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjetoFinal
 {
     public partial class Login : Form
     {
+        // DBConnect dBcon = new DBConnect();
         public Login()
         {
             InitializeComponent();
@@ -59,7 +61,10 @@ namespace ProjetoFinal
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            
+            // string selectQuery = "SELECT * FROM Usuario WHERE Login='" + textBox_usuario.Text + "' AND Senha='" + textBox_senha.Text + "'";
+            // DataTable TABLE = new DataTable();
+            // SqlDataAdapter adapter = new SqlDataAdapter(selectQuery, dBCon.GetCon());
+            // adapter.Fill(table);
         }
     }
 }

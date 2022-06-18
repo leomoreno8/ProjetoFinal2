@@ -17,7 +17,7 @@ namespace ProjetoFinal
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void itemBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
 
         }

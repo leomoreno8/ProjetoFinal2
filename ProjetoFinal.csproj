@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inicial.cs">
+    <Compile Include="CadastroUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicial.Designer.cs">
-      <DependentUpon>Inicial.cs</DependentUpon>
+    <Compile Include="CadastroUsuarios.Designer.cs">
+      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -64,15 +64,15 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PDVDataSet1.Designer.cs">
+    <Compile Include="PDVDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PDVDataSet1.xsd</DependentUpon>
+      <DependentUpon>PDVDataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Inicial.resx">
-      <DependentUpon>Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroUsuarios.resx">
+      <DependentUpon>CadastroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -89,16 +89,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="PDVDataSet1.xsc">
-      <DependentUpon>PDVDataSet1.xsd</DependentUpon>
+    <None Include="PDVDataSet11.xsc">
+      <DependentUpon>PDVDataSet11.xsd</DependentUpon>
     </None>
-    <None Include="PDVDataSet1.xsd">
+    <None Include="PDVDataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PDVDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>PDVDataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PDVDataSet1.xss">
-      <DependentUpon>PDVDataSet1.xsd</DependentUpon>
+    <None Include="PDVDataSet11.xss">
+      <DependentUpon>PDVDataSet11.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
