@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinal
 {
-    partial class Form1
+    partial class Espera
     {
         /// <summary>
         /// Required designer variable.
