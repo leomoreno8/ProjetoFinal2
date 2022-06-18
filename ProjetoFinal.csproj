@@ -52,6 +52,12 @@
     <Compile Include="CadastroUsuarios.Designer.cs">
       <DependentUpon>CadastroUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Espera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Espera.Designer.cs">
+      <DependentUpon>Espera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
