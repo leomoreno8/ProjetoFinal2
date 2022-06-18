@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal
 {
-    public partial class Menu : Form
+    public partial class Form1 : Form
     {
-        public Menu()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
