@@ -80,17 +80,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="PDVDataSet.xsc">
-      <DependentUpon>PDVDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="PDVDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PDVDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="PDVDataSet.xss">
-      <DependentUpon>PDVDataSet.xsd</DependentUpon>
-    </None>
     <None Include="PDVDataSet1.xsc">
       <DependentUpon>PDVDataSet1.xsd</DependentUpon>
     </None>
