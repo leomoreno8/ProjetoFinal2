@@ -68,6 +68,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Abrir Caixa";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -91,6 +92,7 @@
             this.Name = "Espera";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Espera_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
