@@ -35,9 +35,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.label_exit = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,17 +102,19 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(322, 35);
             this.textBox2.TabIndex = 6;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
-            // button1
+            // button_login
             // 
-            this.button1.BackColor = System.Drawing.Color.Indigo;
-            this.button1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.button1.Location = new System.Drawing.Point(712, 422);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(322, 47);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ENTRAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_login.BackColor = System.Drawing.Color.Indigo;
+            this.button_login.ForeColor = System.Drawing.Color.GhostWhite;
+            this.button_login.Location = new System.Drawing.Point(712, 422);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(322, 47);
+            this.button_login.TabIndex = 7;
+            this.button_login.Text = "ENTRAR";
+            this.button_login.UseVisualStyleBackColor = false;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // label_exit
             // 
@@ -147,7 +150,7 @@
             this.ClientSize = new System.Drawing.Size(1121, 626);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label_exit);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_login);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
@@ -170,9 +173,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.Label label_exit;
         private System.Windows.Forms.Label label6;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 
