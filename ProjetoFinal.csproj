@@ -80,6 +80,9 @@
     <EmbeddedResource Include="CadastroUsuarios.resx">
       <DependentUpon>CadastroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Espera.resx">
+      <DependentUpon>Espera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
