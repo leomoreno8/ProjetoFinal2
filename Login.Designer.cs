@@ -62,7 +62,6 @@
             this.label1.Size = new System.Drawing.Size(202, 96);
             this.label1.TabIndex = 1;
             this.label1.Text = "LOGIN";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -74,7 +73,6 @@
             this.label2.Size = new System.Drawing.Size(102, 39);
             this.label2.TabIndex = 2;
             this.label2.Text = "USUÁRIO";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -126,7 +124,6 @@
             this.label_exit.Size = new System.Drawing.Size(31, 29);
             this.label_exit.TabIndex = 8;
             this.label_exit.Text = "X";
-            this.label_exit.Click += new System.EventHandler(this.label3_Click_1);
             this.label_exit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label_exit_MouseClick);
             this.label_exit.MouseEnter += new System.EventHandler(this.label_exit_MouseEnter);
             this.label_exit.MouseLeave += new System.EventHandler(this.label_exit_MouseLeave);
