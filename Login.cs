@@ -19,31 +19,6 @@ namespace ProjetoFinal
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label_exit_MouseEnter(object sender, EventArgs e)
         {
             label_exit.ForeColor = Color.Red;
@@ -61,6 +36,13 @@ namespace ProjetoFinal
 
         private void button_login_Click(object sender, EventArgs e)
         {
+            Espera espera = new Espera();
+            espera.Show();
+            this.Hide();
+
+            //DataRow foundRow = PDVDataSet1.Usuario["AnyTable"].Rows.Find(s);
+            
+            // var db = this.PDVDataSet11
             // string selectQuery = "SELECT * FROM Usuario WHERE Login='" + textBox_usuario.Text + "' AND Senha='" + textBox_senha.Text + "'";
             // DataTable TABLE = new DataTable();
             // SqlDataAdapter adapter = new SqlDataAdapter(selectQuery, dBCon.GetCon());
