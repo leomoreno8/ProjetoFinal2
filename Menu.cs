@@ -19,9 +19,6 @@ namespace ProjetoFinal
 
         private void itemBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.itemBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pDVDataSet);
 
         }
     }

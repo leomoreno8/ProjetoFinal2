@@ -16,7 +16,7 @@ namespace ProjetoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroUsuario());
+            Application.Run(new CadastroUsuarios());
         }
     }
 }
