@@ -36,17 +36,39 @@ namespace ProjetoFinal
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            Espera espera = new Espera();
-            espera.Show();
-            this.Hide();
+            string usuario = textBox_usuario.Text;
+            string senha = textBox_senha.Text;
 
-            //DataRow foundRow = PDVDataSet1.Usuario["AnyTable"].Rows.Find(s);
-            
-            // var db = this.PDVDataSet11
-            // string selectQuery = "SELECT * FROM Usuario WHERE Login='" + textBox_usuario.Text + "' AND Senha='" + textBox_senha.Text + "'";
-            // DataTable TABLE = new DataTable();
-            // SqlDataAdapter adapter = new SqlDataAdapter(selectQuery, dBCon.GetCon());
-            // adapter.Fill(table);
+            DataRow[] foundRows;
+            foundRows = pDVDataSet1.Tables["Usuario"].Select("Login = '"+ usuario +"' and Senha = '"+ senha +"'");
+
+            if (foundRows.Length > 0)
+            {
+                MessageBox.Show(foundRows[0].ToString());
+                Espera espera = new Espera();
+                espera.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou Senha Incorreta");
+            }
+
+        }
+
+        private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuarioBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.pDVDataSet1);
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'pDVDataSet1.Usuario'. Você pode movê-la ou removê-la conforme necessário.
+            this.usuarioTableAdapter.Fill(this.pDVDataSet1.Usuario);
+
         }
     }
 }
