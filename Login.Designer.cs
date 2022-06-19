@@ -186,9 +186,9 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            this.usuarioDataGridView.Location = new System.Drawing.Point(111, 25);
+            this.usuarioDataGridView.Location = new System.Drawing.Point(27, 201);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.Size = new System.Drawing.Size(464, 220);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(344, 220);
             this.usuarioDataGridView.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
@@ -222,7 +222,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1938, 1061);
-            this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label_exit);
@@ -232,6 +231,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.usuarioDataGridView);
             this.Name = "Login";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
