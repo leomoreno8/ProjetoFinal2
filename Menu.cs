@@ -12,14 +12,16 @@ namespace ProjetoFinal
 {
     public partial class Menu : Form
     {
-        public Menu()
+        public Menu(string nomeBusca)
         {
             InitializeComponent();
+            nome_usuario.Text = nomeBusca;
         }
 
         private void itemBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

@@ -188,7 +188,7 @@
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
             this.usuarioDataGridView.Location = new System.Drawing.Point(111, 25);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(464, 220);
             this.usuarioDataGridView.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1

@@ -39,14 +39,25 @@ namespace ProjetoFinal
             string usuario = textBox_usuario.Text;
             string senha = textBox_senha.Text;
 
-            DataRow[] foundRows;
-            foundRows = pDVDataSet1.Tables["Usuario"].Select("Login = '"+ usuario +"' and Senha = '"+ senha +"'");
+            string UsuarioIdBusca = "";
+            string NomeBusca = "";
+            string LoginBusca = "";
+            string SenhaBusca = "";
 
-            if (foundRows.Length > 0)
+            DataRow[] oDataRow = pDVDataSet1.Tables["Usuario"].Select("Login = '" + usuario + "' and Senha = '" + senha + "'");
+            
+            if (oDataRow.Length > 0)
             {
-                MessageBox.Show(foundRows[0].ToString());
-                Espera espera = new Espera();
-                espera.Show();
+                foreach (DataRow dr in oDataRow)
+                {
+                    UsuarioIdBusca = dr[0].ToString();
+                    NomeBusca = dr["Nome"].ToString();
+                    LoginBusca = dr[2].ToString();
+                    SenhaBusca = dr[3].ToString();
+                }
+
+                Menu menu = new Menu(NomeBusca);
+                menu.Show();
                 this.Hide();
             }
             else
