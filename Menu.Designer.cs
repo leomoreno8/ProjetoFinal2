@@ -32,20 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.labelCod = new System.Windows.Forms.Label();
             this.input_codigo = new System.Windows.Forms.TextBox();
-            this.textBoxProd = new System.Windows.Forms.TextBox();
+            this.input_descricao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxPrecoUnit = new System.Windows.Forms.TextBox();
+            this.input_preco = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.input_quantidade = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.input_total = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.list_itens = new System.Windows.Forms.TextBox();
             this.nome_usuario = new System.Windows.Forms.Label();
             this.pDVDataSet1 = new ProjetoFinal.PDVDataSet1();
             this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,6 +71,10 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.itemBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.itemBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.list_totals = new System.Windows.Forms.TextBox();
+            this.total_geral = new System.Windows.Forms.TextBox();
+            this.text_est = new System.Windows.Forms.TextBox();
+            this.text_operacao = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pDVDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).BeginInit();
@@ -98,17 +102,18 @@
             this.input_codigo.Size = new System.Drawing.Size(438, 31);
             this.input_codigo.TabIndex = 1;
             this.input_codigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.input_codigo.TextChanged += new System.EventHandler(this.input_codigo_TextChanged);
             this.input_codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.input_codigo_KeyPress);
             // 
-            // textBoxProd
+            // input_descricao
             // 
-            this.textBoxProd.AcceptsTab = true;
-            this.textBoxProd.Enabled = false;
-            this.textBoxProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProd.Location = new System.Drawing.Point(297, 294);
-            this.textBoxProd.Name = "textBoxProd";
-            this.textBoxProd.Size = new System.Drawing.Size(438, 31);
-            this.textBoxProd.TabIndex = 3;
+            this.input_descricao.AcceptsTab = true;
+            this.input_descricao.Enabled = false;
+            this.input_descricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_descricao.Location = new System.Drawing.Point(297, 294);
+            this.input_descricao.Name = "input_descricao";
+            this.input_descricao.Size = new System.Drawing.Size(438, 31);
+            this.input_descricao.TabIndex = 3;
             // 
             // label1
             // 
@@ -120,16 +125,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Produto";
             // 
-            // textBoxPrecoUnit
+            // input_preco
             // 
-            this.textBoxPrecoUnit.AcceptsTab = true;
-            this.textBoxPrecoUnit.Enabled = false;
-            this.textBoxPrecoUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrecoUnit.Location = new System.Drawing.Point(297, 378);
-            this.textBoxPrecoUnit.Name = "textBoxPrecoUnit";
-            this.textBoxPrecoUnit.Size = new System.Drawing.Size(438, 31);
-            this.textBoxPrecoUnit.TabIndex = 5;
-            this.textBoxPrecoUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.input_preco.AcceptsTab = true;
+            this.input_preco.Enabled = false;
+            this.input_preco.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_preco.Location = new System.Drawing.Point(297, 378);
+            this.input_preco.Name = "input_preco";
+            this.input_preco.Size = new System.Drawing.Size(438, 31);
+            this.input_preco.TabIndex = 5;
+            this.input_preco.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -193,15 +198,15 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "<F10> Finaliza";
             // 
-            // textBoxTotal
+            // input_total
             // 
-            this.textBoxTotal.Enabled = false;
-            this.textBoxTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotal.Location = new System.Drawing.Point(297, 677);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.Size = new System.Drawing.Size(438, 31);
-            this.textBoxTotal.TabIndex = 12;
-            this.textBoxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.input_total.Enabled = false;
+            this.input_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_total.Location = new System.Drawing.Point(297, 677);
+            this.input_total.Name = "input_total";
+            this.input_total.Size = new System.Drawing.Size(438, 31);
+            this.input_total.TabIndex = 12;
+            this.input_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -227,6 +232,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Thistle;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(777, 174);
             this.textBox1.Multiline = true;
@@ -236,15 +242,16 @@
             this.textBox1.Text = "Supermercado Bom de Preço\r\nCNPJ 00.000.000/0000-00\r\n-----------------------------" +
     "-------------------------\r\n";
             // 
-            // textBox2
+            // list_itens
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Thistle;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(777, 229);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(559, 463);
-            this.textBox2.TabIndex = 15;
+            this.list_itens.BackColor = System.Drawing.Color.Thistle;
+            this.list_itens.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.list_itens.Location = new System.Drawing.Point(839, 229);
+            this.list_itens.Multiline = true;
+            this.list_itens.Name = "list_itens";
+            this.list_itens.ReadOnly = true;
+            this.list_itens.Size = new System.Drawing.Size(411, 421);
+            this.list_itens.TabIndex = 15;
             // 
             // nome_usuario
             // 
@@ -458,28 +465,77 @@
             this.itemBindingNavigator.TabIndex = 17;
             this.itemBindingNavigator.Text = "bindingNavigator1";
             // 
+            // list_totals
+            // 
+            this.list_totals.BackColor = System.Drawing.Color.Thistle;
+            this.list_totals.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.list_totals.Location = new System.Drawing.Point(1248, 229);
+            this.list_totals.Multiline = true;
+            this.list_totals.Name = "list_totals";
+            this.list_totals.ReadOnly = true;
+            this.list_totals.Size = new System.Drawing.Size(66, 421);
+            this.list_totals.TabIndex = 19;
+            // 
+            // total_geral
+            // 
+            this.total_geral.BackColor = System.Drawing.Color.Thistle;
+            this.total_geral.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.total_geral.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_geral.Location = new System.Drawing.Point(777, 655);
+            this.total_geral.Multiline = true;
+            this.total_geral.Name = "total_geral";
+            this.total_geral.ReadOnly = true;
+            this.total_geral.Size = new System.Drawing.Size(559, 53);
+            this.total_geral.TabIndex = 20;
+            // 
+            // text_est
+            // 
+            this.text_est.BackColor = System.Drawing.Color.Thistle;
+            this.text_est.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_est.Location = new System.Drawing.Point(777, 229);
+            this.text_est.Multiline = true;
+            this.text_est.Name = "text_est";
+            this.text_est.ReadOnly = true;
+            this.text_est.Size = new System.Drawing.Size(62, 421);
+            this.text_est.TabIndex = 21;
+            // 
+            // text_operacao
+            // 
+            this.text_operacao.BackColor = System.Drawing.Color.Thistle;
+            this.text_operacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_operacao.Location = new System.Drawing.Point(1309, 229);
+            this.text_operacao.Multiline = true;
+            this.text_operacao.Name = "text_operacao";
+            this.text_operacao.ReadOnly = true;
+            this.text_operacao.Size = new System.Drawing.Size(27, 421);
+            this.text_operacao.TabIndex = 22;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.text_operacao);
+            this.Controls.Add(this.text_est);
+            this.Controls.Add(this.total_geral);
+            this.Controls.Add(this.list_totals);
             this.Controls.Add(this.itemDataGridView);
             this.Controls.Add(this.itemBindingNavigator);
             this.Controls.Add(this.nome_usuario);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.list_itens);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxTotal);
+            this.Controls.Add(this.input_total);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.input_quantidade);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxPrecoUnit);
+            this.Controls.Add(this.input_preco);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxProd);
+            this.Controls.Add(this.input_descricao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.input_codigo);
             this.Controls.Add(this.labelCod);
@@ -503,20 +559,20 @@
 
         private System.Windows.Forms.Label labelCod;
         private System.Windows.Forms.TextBox input_codigo;
-        private System.Windows.Forms.TextBox textBoxProd;
+        private System.Windows.Forms.TextBox input_descricao;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxPrecoUnit;
+        private System.Windows.Forms.TextBox input_preco;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox input_quantidade;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxTotal;
+        private System.Windows.Forms.TextBox input_total;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox list_itens;
         private System.Windows.Forms.Label nome_usuario;
         private PDVDataSet1 pDVDataSet1;
         private System.Windows.Forms.BindingSource itemBindingSource;
@@ -542,5 +598,9 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton itemBindingNavigatorSaveItem;
         private System.Windows.Forms.BindingNavigator itemBindingNavigator;
+        private System.Windows.Forms.TextBox list_totals;
+        private System.Windows.Forms.TextBox total_geral;
+        private System.Windows.Forms.TextBox text_est;
+        private System.Windows.Forms.TextBox text_operacao;
     }
 }
