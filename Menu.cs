@@ -75,7 +75,7 @@ namespace ProjetoFinal
                 {
                     if (list_itens.Text != "")
                     {
-                        Extornar();
+                        Extornar(input_codigo.Text, input_quantidade.Text);
                     }
                     else
                     {
@@ -200,18 +200,60 @@ namespace ProjetoFinal
             }
         }
 
-        private void Extornar()
+        private void Extornar(string codigo, string quantidade)
         {
-            int i;
-            text_operacao.Text = "";
-            text_est.Text = "";
-            total_geral.Text = "Total geral: R$ 0,00";
-
-
-            for (i = 0; i<lista_linhas; i++)
+            if (!string.IsNullOrEmpty(codigo))
             {
-                text_est.Text += "Est " + Environment.NewLine;
+                input_quantidade.Enabled = true;
+                Search();
+            }
+            else
+            {
+                input_quantidade.Enabled = false;
+                input_descricao.Text = "";
+                input_preco.Text = "";
+                input_quantidade.Text = "";
+            }
+
+            string CodigoItemBusca = "";
+            string DescricaoBusca = "";
+            string UnidadeBusca = "";
+            string PrecoUnitBusca = "";
+            string EstoqueInternoBusca = "";
+            string EstoqueGondolaBusca = "";
+
+            DataRow[] oDataRow = pDVDataSet1.Tables["Item"].Select("Id = '" + codigo + "'");
+
+            if (oDataRow.Length > 0)
+            {
+                foreach (DataRow dr in oDataRow)
+                {
+                    CodigoItemBusca = dr[0].ToString();
+                    DescricaoBusca = dr["Descricao"].ToString();
+                    UnidadeBusca = dr[2].ToString();
+                    PrecoUnitBusca = dr[3].ToString();
+                    EstoqueInternoBusca = dr[4].ToString();
+                    EstoqueGondolaBusca = dr[5].ToString();
+                }
+
+                decimal valorPreco = Convert.ToDecimal(PrecoUnitBusca);
+                int valorQuantidade = Int32.Parse(quantidade);
+                int valorGondola = Int32.Parse(EstoqueGondolaBusca);
+                decimal valorTotal = valorPreco * valorQuantidade;
+
+
+                list_itens.Text += "0000 Est: " + DescricaoBusca + " -" + quantidade + " x R$ " + PrecoUnitBusca + Environment.NewLine;
                 text_operacao.Text += "-" + Environment.NewLine;
+                list_totals.Text += valorTotal + Environment.NewLine;
+                total += valorTotal - valorQuantidade;
+                input_total.Text = total.ToString();
+                total_geral.Text = "Total geral: R$" + total.ToString();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Produto não encontrato em nosso estoque");
             }
         }
     }
