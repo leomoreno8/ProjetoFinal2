@@ -56,7 +56,7 @@ namespace ProjetoFinal
                     SenhaBusca = dr[3].ToString();
                 }
 
-                Menu menu = new Menu(NomeBusca);
+                Menu menu = new Menu(NomeBusca, UsuarioIdBusca);
                 menu.Show();
                 this.Hide();
             }
@@ -81,5 +81,6 @@ namespace ProjetoFinal
             this.usuarioTableAdapter.Fill(this.pDVDataSet1.Usuario);
 
         }
+
     }
 }

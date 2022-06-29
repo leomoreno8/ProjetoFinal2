@@ -75,11 +75,32 @@
             this.total_geral = new System.Windows.Forms.TextBox();
             this.text_est = new System.Windows.Forms.TextBox();
             this.text_operacao = new System.Windows.Forms.TextBox();
+            this.itensCupomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itensCupomTableAdapter = new ProjetoFinal.PDVDataSet1TableAdapters.ItensCupomTableAdapter();
+            this.itensCupomDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cupomBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cupomTableAdapter = new ProjetoFinal.PDVDataSet1TableAdapters.CupomTableAdapter();
+            this.cupomDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pDVDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingNavigator)).BeginInit();
             this.itemBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itensCupomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensCupomDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cupomBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cupomDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCod
@@ -367,7 +388,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -510,12 +530,133 @@
             this.text_operacao.Size = new System.Drawing.Size(27, 421);
             this.text_operacao.TabIndex = 22;
             // 
+            // itensCupomBindingSource
+            // 
+            this.itensCupomBindingSource.DataMember = "ItensCupom";
+            this.itensCupomBindingSource.DataSource = this.pDVDataSet1;
+            // 
+            // itensCupomTableAdapter
+            // 
+            this.itensCupomTableAdapter.ClearBeforeFill = true;
+            // 
+            // itensCupomDataGridView
+            // 
+            this.itensCupomDataGridView.AutoGenerateColumns = false;
+            this.itensCupomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itensCupomDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.itensCupomDataGridView.DataSource = this.itensCupomBindingSource;
+            this.itensCupomDataGridView.Location = new System.Drawing.Point(706, 49);
+            this.itensCupomDataGridView.Name = "itensCupomDataGridView";
+            this.itensCupomDataGridView.Size = new System.Drawing.Size(780, 88);
+            this.itensCupomDataGridView.TabIndex = 23;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Sequencial";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Sequencial";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "CupomId";
+            this.dataGridViewTextBoxColumn8.HeaderText = "CupomId";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "ItemId";
+            this.dataGridViewTextBoxColumn9.HeaderText = "ItemId";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Qtde";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Qtde";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "PrecoUnit";
+            this.dataGridViewTextBoxColumn11.HeaderText = "PrecoUnit";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "TotalItem";
+            this.dataGridViewTextBoxColumn12.HeaderText = "TotalItem";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "UId";
+            this.dataGridViewTextBoxColumn13.HeaderText = "UId";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // cupomBindingSource
+            // 
+            this.cupomBindingSource.DataMember = "Cupom";
+            this.cupomBindingSource.DataSource = this.pDVDataSet1;
+            // 
+            // cupomTableAdapter
+            // 
+            this.cupomTableAdapter.ClearBeforeFill = true;
+            // 
+            // cupomDataGridView
+            // 
+            this.cupomDataGridView.AutoGenerateColumns = false;
+            this.cupomDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cupomDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17});
+            this.cupomDataGridView.DataSource = this.cupomBindingSource;
+            this.cupomDataGridView.Location = new System.Drawing.Point(1392, 173);
+            this.cupomDataGridView.Name = "cupomDataGridView";
+            this.cupomDataGridView.Size = new System.Drawing.Size(460, 72);
+            this.cupomDataGridView.TabIndex = 24;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "DtEmissao";
+            this.dataGridViewTextBoxColumn15.HeaderText = "DtEmissao";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "TotalVenda";
+            this.dataGridViewTextBoxColumn16.HeaderText = "TotalVenda";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "CPF";
+            this.dataGridViewTextBoxColumn17.HeaderText = "CPF";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.cupomDataGridView);
+            this.Controls.Add(this.itensCupomDataGridView);
             this.Controls.Add(this.text_operacao);
             this.Controls.Add(this.text_est);
             this.Controls.Add(this.total_geral);
@@ -550,6 +691,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingNavigator)).EndInit();
             this.itemBindingNavigator.ResumeLayout(false);
             this.itemBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itensCupomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itensCupomDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cupomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cupomDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,5 +747,22 @@
         private System.Windows.Forms.TextBox total_geral;
         private System.Windows.Forms.TextBox text_est;
         private System.Windows.Forms.TextBox text_operacao;
+        private System.Windows.Forms.BindingSource itensCupomBindingSource;
+        private PDVDataSet1TableAdapters.ItensCupomTableAdapter itensCupomTableAdapter;
+        private System.Windows.Forms.DataGridView itensCupomDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.BindingSource cupomBindingSource;
+        private PDVDataSet1TableAdapters.CupomTableAdapter cupomTableAdapter;
+        private System.Windows.Forms.DataGridView cupomDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
     }
 }
